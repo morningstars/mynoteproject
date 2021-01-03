@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+
+{% if request.session.userinfo %}
+    欢迎{{ request.session.userinfo.username }}
+    <a href="/note/logout">注销</a>
+{% else %}
+    <a href="/note/login">登录</a>
+    <a href="/note/register">注册</a>
+{% endif %}
+
+<div>
+  <a href="/note/list">查看我的Note</a>
+</div>
+
+
+
+</body>
+</html>

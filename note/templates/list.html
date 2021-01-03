@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的Note</title>
+</head>
+<body>
+
+<div>
+    我的Notes
+    <a href="/note/add">新增note</a>
+    <a href="/note/">返回首页</a>
+</div>
+
+<table>
+    <tbody>
+        <tr>
+            <th>标题</th>
+            <th>内容</th>
+            <th>创建时间</th>
+            <th>创建人</th>
+            <th>修改时间</th>
+        </tr>
+
+        {% for note in notes %}
+            <tr>
+                <td>{{ note.title }}</td>
+                <td>{{ note.content }}</td>
+                <td>{{ note.create_time }}</td>
+                <td>{{ note.user.username }}</td>
+                <td>{{ note.mod_time }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+</body>
+</html>

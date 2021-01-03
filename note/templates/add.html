@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新增note</title>
+</head>
+<body>
+
+<form method="post" action="/note/add">
+    {% csrf_token %}
+    <div>
+        标题：
+        <input type="text" name="title">
+    </div>
+    <div>
+        内容：
+        <textarea name="content"></textarea>
+    </div>
+    <div>
+        <input type="submit" value="提交">
+    </div>
+</form>
+
+</body>
+</html>
