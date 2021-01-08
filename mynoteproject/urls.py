@@ -21,5 +21,6 @@ from django.conf.urls import include
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.homepage),
-    url(r'^note/', include('note.urls'))
+    url(r'^note/', include('note.urls')),
+    url(r'^user/', include('user.urls')),
 ]

@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<form method="post" action="/note/register">
+<form method="post" action="/user/register">
     {% csrf_token %}
     <div>
         用户名：<input type="text" name="username"><span>{{ name_error }}</span>

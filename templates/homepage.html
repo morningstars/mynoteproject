@@ -6,12 +6,12 @@
 </head>
 <body>
 
-{% if request.session.userinfo %}
+{% if request.session and request.session.userinfo %}
     欢迎{{ request.session.userinfo.username }}
-    <a href="/note/logout">注销</a>
+    <a href="/user/logout">注销</a>
 {% else %}
-    <a href="/note/login">登录</a>
-    <a href="/note/register">注册</a>
+    <a href="/user/login">登录</a>
+    <a href="/user/register">注册</a>
 {% endif %}
 
 <div>
